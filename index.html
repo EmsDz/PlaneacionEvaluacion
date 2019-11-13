@@ -17,143 +17,111 @@
 </head>
 
 <body>
+    <div class="center container row col-md-12">
+        <form action="/my-handling-form-page" method="post" class="center cajaform col-md-4" id="estadoresultado" name="estadoresultado" type="">
 
-    <form action="/my-handling-form-page" method="post" class="container" id="estadoresultado" name="estadoresultado">
-        <br>
-        <p><strong>
-            Estado De Resultado
-        </strong></p><br>
-        <!-- <div class="container"> -->
-        <div>
-            <label for="ventasnetas">Ventas Netas:</label>
-            <input type="text" id="ventasnetas" />
-        </div><br>
+            <h2 class="">Estado De Resultado</h2>
 
-        <div>
-            <label for="costoventas">Costo De Ventas:</label>
-            <input type="text" id="costoventas" />
-        </div><br>
+            <div class="center row">
 
-        <div>
-            <label for="utilidadbruta">UTILIDAD BRUTA:</label>
-            <input type="text" id="utilidadbruta" disabled>
-        </div><br><br>
+                <label class="espacio" for="ventasnetas">Ventas Netas: </label>
+                <input type="number" id="ventasnetas" /><br>
 
-        <div>
-            <label for="gastosadmin">Gastos Administrativos:</label>
-            <input type="text" id="gastosadmin" />
-        </div><br>
+                <label class="espacio" for="costoventas">Costo De Ventas: </label>
+                <input type="number" id="costoventas" /><br>
 
-        <div>
-            <label for="gastosventas">Gastos De Ventas:</label>
-            <input type="text" id="gastosventas" />
-        </div><br>
+                <label class="espacio negrita" for="utilidadbruta">UTILIDAD BRUTA: </label>
+                <input type="number" id="utilidadbruta" class="caja" disabled><br><br>
 
-        <div>
-            <label for="depreciacion">Depreciacíon:</label>
-            <input type="text" id="depreciacion" />
-        </div><br>
+                <label class="espacio" for="gastosadmin">Gastos Administrativos: </label>
+                <input type="number" id="gastosadmin" /><br>
 
-        <div>
-            <label for="utilidadoperativa">UTILIDAD OPERATIVA:</label>
-            <input type="text" id="utilidadoperativa" disabled>
-        </div><br><br>
+                <label class="espacio" for="gastosventas">Gastos De Ventas: </label>
+                <input type="number" id="gastosventas" /><br>
 
-        <div>
-            <label for="gastosfinancieros">Gastos Financieros:</label>
-            <input type="text" id="gastosfinancieros" />
-        </div><br>
+                <label class="espacio" for="depreciacion">Depreciacíon: </label>
+                <input type="number" id="depreciacion" /><br>
 
-        <div>
-            <label for="utilidadantesimpuestosintereses">UTILIDAD ANTES DE IMTERESES E IMPUESTOS (EBIT):</label>
-            <input type="text" id="utilidadantesimpuestosintereses" disabled>
-        </div><br>
-        <BR></BR>
+                <label class="espacio negrita" for="utilidadoperativa">UTILIDAD OPERATIVA: </label>
+                <input type="number" id="utilidadoperativa" class="caja" disabled><br><br>
 
-        <div>
-            <label for="intereses">Intereses:</label>
-            <input type="text" id="intereses" />
-        </div><br>
+                <label class="espacio" for="gastosfinancieros">Gastos Financieros: </label>
+                <input type="number" id="gastosfinancieros" /><br>
 
-        <div>
-            <label for="utilidadantesimpuestos">UTILIDAD ANTES DE IMPUESTOS (EBT):</label>
-            <input type="text" id="utilidadantesimpuestos" disabled>
-        </div><br>
-        <BR></BR>
+                <label class="espacio negrita" for="utilidadantesimpuestosintereses">UTILIDAD ANTES DE IMTERESES E IMPUESTOS (EBIT): </label>
+                <input type="number" id="utilidadantesimpuestosintereses" class="caja" disabled><br></br>
 
-        <div>
-            <label for="impuestos">Impuestos:</label>
-            <input type="text" id="impuestos" />
-        </div><br>
+                <label class="espacio" for="intereses">Intereses: </label>
+                <input type="number" id="intereses" /><br>
 
-        <div>
-            <label for="utilidadneta">UTILIDAD NETA:</label>
-            <input type="text" id="utilidadneta" disabled>
-        </div><br><br>
+                <label class="espacio negrita" for="utilidadantesimpuestos">UTILIDAD ANTES DE IMPUESTOS (EBT): </label>
+                <input type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
-        <!-- </div> -->
-    </form>
+                <label class="espacio" for="impuestos">Impuestos: </label>
+                <input type="number" id="impuestos" /><br>
+
+                <label class="espacio negrita" for="utilidadneta">UTILIDAD NETA: </label>
+                <input type="number" id="utilidadneta" class="caja" disabled><br><br>
+            </div>
+        </form>
 
 
-    <form action="" class="container" id="balancegeneral" name="balancegeneral">
-        <p><strong>
-            Balance General
-        </strong></p><br>
+        <form action="" class="center cajaform col-md-6" id="balancegeneral" name="balancegeneral">
 
-        <strong>Activos</strong>
-        <div>
-            <label for="efectivo">Efectivo/Bancos:</label>
-            <input type="text" id="efectivo" />
-        </div><br>
+            <h2>Balance General</h2>
 
-        <div>
-            <label for="cuentasporcobrar">Cuentas Por Cobrar:</label>
-            <input type="text" id="cuentasporcobrar" />
-        </div><br>
+            <div class="row center col-md-12">
+                <div class="col-md-6">
+                    <h4>Activos</h4><br>
+                    <label class="divicion" for="efectivo">Efectivo/Bancos:</label>
+                    <input type="number" id="efectivo" /><br>
+                    <label class="divicion" for="cuentasporcobrar">Cuentas Por Cobrar:</label>
+                    <input type="number" id="cuentasporcobrar" /><br>
+                    <label class="divicion" for="inventario">Inventario:</label>
+                    <input type="number" id="inventario" /><br>
+                    <label class="divicion negrita" for="activoscirculantes">Activos Circulantes Totales:</label>
+                    <input type="number" id="activoscirculantes" class="caja" disabled/><br><br>
+                    <label class="divicion negrita" for="activosfijos">Activos Fijos:</label>
+                    <input type="number" id="activosfijos" /><br><br>
+                    <label class="divicion negrita" for="">Activos Totales: </label>
+                    <input type="number" id="totalactivos" class="caja" disabled>
 
-        <div>
-            <label for="inventario">Inventario:</label>
-            <input type="text" id="inventario" />
-        </div><br>
+                    <label class="balance negrita" for="activos">Activos = <input class="especial caja" type="number" id="activos" disabled></label>
 
-        <div>
-            <label for="activoscirculantes">Activos Circulantes Totales:</label>
-            <input type="text" id="activoscirculantes" disabled/>
-        </div><br>
 
-        <div>
-            <label for="activosfijos">Activos Fijos:</label>
-            <input type="text" id="activosfijos" />
-        </div><br>
-        <p><strong> Activos Totales: <input type="text" id="totalactivos" disabled></strong></p><br>
+                </div>
 
-        <p>Pasivos y Patrimonios</p>
-        <div>
-            <label for="pasivoscirculantes">Pasivos Circulantes:</label>
-            <input type="text" id="pasivoscirculantes" />
-        </div><br>
+                <div class="col-md-6">
+                    <!-- <div class="col-md-5 offset-md-2"> -->
+                    <h4>Pasivos </h4><br>
+                    <label class="divicion negrita" for="pasivoscirculantes">Pasivos Circulantes:</label>
+                    <input type="number" id="pasivoscirculantes" class="caja" /><br><br>
+                    <label class="divicion" for="pasivoslargoplazo">Pasivos a Largo Plazo:</label>
+                    <input type="number" id="pasivoslargoplazo" /><br>
+                    <label class="divicion negrita">Pasivos Totales</label>
+                    <input class="caja" type="number" id="totalpasivos" disabled><br><br><br>
 
-        <div>
-            <label for="pasivoslargoplazo">Pasivos a Largo Plazo:</label>
-            <input type="text" id="pasivoslargoplazo" />
-        </div><br>
-        <p><strong>Pasivos Totales <input type="text" id="totalpasivos" disabled></strong></p><br>
+                    <h4>Patrimonio</h4>
+                    <label class="divicion" for="capitalcomun">Capital Comun:</label>
+                    <input type="number" id="capitalcomun" />
 
-        <p>Patrimonio</p>
-        <div>
-            <label for="capitalcomun">Capital Comun:</label>
-            <input type="text" id="capitalcomun" />
-        </div><br>
 
-        <button type="button" onclick="obtenerdatos(); calcularRazones()">Calcular</button>
-        <br><br>
+                    <label class="balance negrita" for="pmasc">Pasivos + Capital = <input class="especial caja" type="number" id="pmasc" disabled/></label>
 
-        <!-- <div>
+                </div>
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" onclick="obtenerdatos(); calcularRazones()">Calcular</button>
+        <!-- primary success warning danger -->
+    </div>
+
+    <br><br>
+
+    <!-- <div>
             <label for="">:</label>
-            <input type="text" id="" />
+            <input type="number" id="" />
         </div><br> -->
 
-    </form>
 
     <form action="" class="container" id="razonesfinancieras" name="razonesfinancieras">
         <p><strong>
@@ -171,73 +139,73 @@
             <tr id="">
                 <td id="">Razón Circulante</td>
                 <td id="r1"></td>
-                <td id=""><input type="text" name="" id=""></td>
+                <td id=""><input type="number" name="" id=""></td>
                 <td id="estado1"></td>
             </tr>
             <tr>
                 <td>Razón Rápida</td>
                 <td id="r2"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado2"></td>
             </tr>
             <tr>
                 <td>Rotación de Inventario</td>
                 <td id="r3"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado3"></td>
             </tr>
             <tr>
                 <td>Diás de Ventas Pendientes de Cobro (DSO)</td>
                 <td id="r4"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado4"></td>
             </tr>
             <tr>
                 <td>Rotación de los Activos Fijos</td>
                 <td id="r5"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado5"></td>
             </tr>
             <tr>
                 <td>Rotación de los Activos Totales</td>
                 <td id="r6"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado6"></td>
             </tr>
             <tr>
                 <td>Deuda Total a Activos Totales</td>
                 <td id="r7"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado7"></td>
             </tr>
             <tr>
                 <td>Rotación del Interés (TIE)</td>
                 <td id="r8"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado8"></td>
             </tr>
             <tr>
                 <td>Margen de Utilidad Sobre Ventas</td>
                 <td id="r9"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado9"></td>
             </tr>
             <tr>
                 <td>Generación Básica de Utilidades</td>
                 <td id="r10"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado10"></td>
             </tr>
             <tr>
                 <td>Rendimiento Sobre los Activos Totales (ROA)</td>
                 <td id="r11"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado11"></td>
             </tr>
             <tr>
                 <td>Rendimiento Sobre el Capital (ROE)</td>
                 <td id="r12"></td>
-                <td><input type="text" name="" id=""></td>
+                <td><input type="number" name="" id=""></td>
                 <td id="estado12"></td>
             </tr>
 

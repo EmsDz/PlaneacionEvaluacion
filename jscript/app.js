@@ -58,7 +58,9 @@ function obtenerdatos() {
 
     document.balancegeneral.activoscirculantes.value = activoscirculantes.toString(10);
     document.balancegeneral.totalactivos.value = totalactivos;
+    document.balancegeneral.activos.value = totalactivos;
     document.balancegeneral.totalpasivos.value = pasivostotales;
+    document.balancegeneral.pmasc.value = pasivomascapital;
     // document.balancegeneral..value = ;
 }
 
