@@ -1,0 +1,89 @@
+/* 
+
+
+*/
+
+input {
+    border: 1px solid;
+    border-radius: 6px;
+    width: 100px;
+    height: 25px;
+    outline: none;
+    text-align: right;
+    padding-right: 1%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.center {
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+form {
+    border: 2px solid rgb(53, 46, 46);
+    padding-bottom: 30px;
+    /* padding-left: 30px; */
+    margin: 30px 20px 30px 80px;
+}
+
+.boton {
+    background-color: green;
+}
+
+table {
+    /*  */
+    border-collapse: collapse;
+    /* table-layout: auto; fixed;*/
+    table-layout: auto;
+    width: 60%;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc5c5
+}
+
+td {
+    height: 20px;
+    /* width: 20px; */
+}
+
+.tdinput {
+    /* height: 5px; */
+    /* width: 5px; */
+    text-align: center;
+    object-position: center;
+    object-fit: fill;
+}
+
+.Ttypeinput {
+    border: none;
+    /* width: auto;
+    height: auto; */
+    outline: none;
+    text-align: right;
+    max-width: 500px;
+    margin: auto;
+    padding-right: 8px;
+}
+
+
+/* 
+The object-fit property can have the following values:
+
+    fill - This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished to fit
+    contain - The replaced content is scaled to maintain its aspect ratio while fitting within the element's content box
+    cover - The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit
+    none - The replaced content is not resized
+    scale-down - The content is sized as if none or contain were specified (would result in a smaller concrete object size)
+
+*/

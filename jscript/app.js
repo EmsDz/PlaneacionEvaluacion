@@ -20,19 +20,21 @@ function obtenerdatos() {
     var utilidadoperativa = parseInt(utilidadbruta) - (parseInt(gastosadmin) + parseInt(gastosventas) + parseInt(depreciacion));
 
     var gastosfinancieros = document.getElementById("gastosfinancieros").value;
-    var utilidadantesimpuestosintereses = utilidadoperativa - gastosfinancieros;
+    var utilidadantesimpuestosintereses = utilidadoperativa - parseInt(gastosfinancieros);
 
-    var intereses = document.getElementById("intereses").value;
-    var utilidadantesimpuestos = utilidadantesimpuestosintereses - intereses;
+    // var intereses = document.getElementById("intereses").value;
+    // var utilidadantesimpuestos = utilidadantesimpuestosintereses - parseInt(intereses);
+    var utilidadantesimpuestos = utilidadantesimpuestosintereses;
 
     var impuestos = document.getElementById("impuestos").value;
-    var utilidadneta = utilidadantesimpuestos - impuestos;
+    // calculo de impuestos
+    var utilidadneta = utilidadantesimpuestos - parseInt(impuestos);
 
     // console.log();
 
-    document.estadoresultado.utilidadbruta.value = utilidadbruta;
+    document: estadoresultado.utilidadbruta.value = utilidadbruta;
     document.estadoresultado.utilidadoperativa.value = utilidadoperativa;
-    document.estadoresultado.utilidadantesimpuestosintereses.value = utilidadantesimpuestosintereses;
+    // document.estadoresultado.utilidadantesimpuestosintereses.value = utilidadantesimpuestosintereses;
     document.estadoresultado.utilidadantesimpuestos.value = utilidadantesimpuestos;
     document.estadoresultado.utilidadneta.value = utilidadneta;
 
@@ -66,7 +68,8 @@ function obtenerdatos() {
 
 function calcularRazones() {
     var ventasNetas = parseInt(document.getElementById("ventasnetas").value);
-    var EBIT = parseInt(document.getElementById("utilidadantesimpuestosintereses").value);
+    // var EBIT = parseInt(document.getElementById("utilidadantesimpuestosintereses").value);
+    var EBIT = parseInt(document.getElementById("utilidadoperativa").value);
     var intereses = parseInt(document.getElementById("intereses").value);
     var ingresosNetos = parseInt(document.getElementById("utilidadneta").value);
     var cuentasporcobrar = parseInt(document.getElementById("cuentasporcobrar").value);
@@ -95,7 +98,7 @@ function calcularRazones() {
 
 
     for (ted = 0; ted < razones.length; ted++) {
-        document.getElementById('r' + (ted + 1)).innerHTML = razones[ted];
+        document.getElementById('r' + (ted + 1)).innerHTML = razones[ted].toFixed(2);
         // element = razones[ted];
     }
 
@@ -110,5 +113,42 @@ function comparacion() {
         razones.push(parseInt(document.getElementById('r' + (ted + 1)).value));
         comparar.push(parseInt(document.getElementById('estado' + (ted + 1)).value));
     }
-    console.log(razones, comparar);
+    // console.log(razones, comparar);
+    for (ted = 0; ted < razones.length; ted++) {
+        if (razones[ted] > comparar[ted]) {
+            document.getElementById('estado' + (ted + 1)).innerText = "ALTO";
+        } else {
+            document.getElementById('estado' + (ted + 1)).innerHTML = "BAJO";
+        }
+        // element = razones[ted];
+    }
+
 }
+
+// calculo on real time
+let inputs = document.getElementsByTagName('input'),
+    inputsArray = [];
+
+for (const input of inputs) {
+    inputsArray.push(input);
+}
+
+inputsArray
+    .filter(input => input.id)
+    .forEach(input => {
+        input.addEventListener('change', () => {
+            obtenerdatos();
+            calcularRazones();
+        });
+    });
+
+// JavaScript + jQuery
+// function resizeInput() {
+//     $(this).attr('size', $(this).val().length);
+// }
+
+// $('input[type="text"]')
+//     // event handler
+//     .keyup(resizeInput)
+//     // resize on page load
+//     .each(resizeInput);
