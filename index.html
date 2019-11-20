@@ -10,105 +10,248 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="mycss/mystyle.css">
+    <link rel="stylesheet" href="mycss/mystyletabla.css">
     <!-- Doc Name -->
     <title>Planeacion y Evaluacion</title>
 </head>
 
 <body>
-    <div class="center container row col-md-12">
-        <form action="/my-handling-form-page" method="post" class="center cajaform col-md-4" id="estadoresultado" name="estadoresultado" type="">
+    <div class="fcolor container center row col-md-12">
+        <form action="/my-handling-form-page" method="post" class="container center col-md-4" id="estadoresultado" name="estadoresultado" type="">
 
             <h2 class="">Estado De Resultado</h2>
 
-            <div class="center row">
+            <div class="container center row">
 
                 <label class="espacio" for="ventasnetas">+ Ventas Netas: </label>
-                <input placeholder="0" value="0" type="number" id="ventasnetas" /><br>
+                <input placeholder="0" value="" type="number" id="ventasnetas" /><br>
 
                 <label class="espacio" for="costoventas">- Costo De Ventas: </label>
-                <input placeholder="0" value="0" type="number" id="costoventas" /><br>
+                <input placeholder="0" value="" type="number" id="costoventas" /><br>
 
                 <label class="espacio negrita" for="utilidadbruta">= UTILIDAD BRUTA: </label>
-                <input placeholder="0" value="0" type="number" id="utilidadbruta" class="caja" disabled><br><br>
+                <input placeholder="0" value="" type="number" id="utilidadbruta" class="caja" disabled><br><br>
 
                 <label class="espacio" for="gastosadmin">- Gastos Administrativos: </label>
-                <input placeholder="0" value="0" type="number" id="gastosadmin" /><br>
+                <input placeholder="0" value="" type="number" id="gastosadmin" /><br>
 
                 <label class="espacio" for="gastosventas">- Gastos De Ventas: </label>
-                <input placeholder="0" value="0" type="number" id="gastosventas" /><br>
+                <input placeholder="0" value="" type="number" id="gastosventas" /><br>
 
                 <label class="espacio" for="depreciacion">- Depreciacíon: </label>
-                <input placeholder="0" value="0" type="number" id="depreciacion" /><br>
+                <input placeholder="0" value="" type="number" id="depreciacion" /><br>
 
                 <label class="espacio negrita" for="utilidadoperativa">= UTILIDAD OPERATIVA (EBIT): </label>
-                <input placeholder="0" value="0" type="number" id="utilidadoperativa" class="caja" disabled><br><br>
+                <input placeholder="0" value="" type="number" id="utilidadoperativa" class="caja" disabled><br><br>
 
                 <label class="espacio" for="gastosfinancieros">- Gastos Financieros: </label>
-                <input placeholder="0" value="0" type="number" id="gastosfinancieros" /><br>
+                <input placeholder="0" value="" type="number" id="gastosfinancieros" /><br>
 
                 <!-- <label class="espacio negrita" for="utilidadantesimpuestosintereses">UTILIDAD ANTES DE IMTERESES E IMPUESTOS (EBIT): </label>
-                <input placeholder="0" value="0" type="number" id="utilidadantesimpuestosintereses" class="caja" disabled><br></br>
+                <input placeholder="0" value="" type="number" id="utilidadantesimpuestosintereses" class="caja" disabled><br></br>
 
                 <label class="espacio" for="intereses">Intereses: </label>
-                <input placeholder="0" value="0" type="number" id="intereses" /><br> -->
+                <input placeholder="0" value="" type="number" id="intereses" /><br> -->
 
                 <label class="espacio negrita" for="utilidadantesimpuestos">= UTILIDAD ANTES DE IMPUESTOS (EBT): </label>
-                <input placeholder="0" value="0" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
+                <input placeholder="0" value="" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
                 <label class="espacio" for="impuestos">- Impuestos: </label>
-                <input placeholder="0" value="0" type="number" id="impuestos" /><br>
+                <input placeholder="0" value="" type="number" id="impuestos" /><br>
 
                 <label class="espacio negrita" for="utilidadneta">= UTILIDAD NETA: </label>
-                <input placeholder="0" value="0" type="number" id="utilidadneta" class="caja" disabled><br><br>
+                <input placeholder="0" value="" type="number" id="utilidadneta" class="caja" disabled><br><br>
             </div>
         </form>
 
 
-        <form action="" class="center cajaform col-md-6" id="balancegeneral" name="balancegeneral">
+        <form action="" class="container center col-md-6" id="balancegeneral" name="balancegeneral">
 
             <h2>Balance General</h2>
 
-            <div class="row center col-md-12">
-                <div class="col-md-6">
+            <!-- <div class="row center col-md-12 offset-1"> -->
+            <div class="container row center col-md-12">
+                <div class="container center col-md-6">
                     <h4>Activos</h4><br>
                     <label class="divicion" for="efectivo">Efectivo/Bancos:</label>
-                    <input placeholder="0" value="0" type="number" id="efectivo" /><br>
+                    <input placeholder="0" value="" type="number" id="efectivo" /><br>
                     <label class="divicion" for="cuentasporcobrar">Cuentas Por Cobrar:</label>
-                    <input placeholder="0" value="0" type="number" id="cuentasporcobrar" /><br>
+                    <input placeholder="0" value="" type="number" id="cuentasporcobrar" /><br>
                     <label class="divicion" for="inventario">Inventario:</label>
-                    <input placeholder="0" value="0" type="number" id="inventario" /><br>
+                    <input placeholder="0" value="" type="number" id="inventario" /><br>
                     <label class="divicion negrita" for="activoscirculantes">Activos Circulantes Totales:</label>
-                    <input placeholder="0" value="0" type="number" id="activoscirculantes" class="caja" disabled/><br><br>
+                    <input placeholder="0" value="" type="number" id="activoscirculantes" class="caja" disabled/><br><br>
                     <label class="divicion negrita" for="activosfijos">Activos Fijos:</label>
-                    <input placeholder="0" value="0" type="number" id="activosfijos" /><br><br>
+                    <input placeholder="0" value="" type="number" id="activosfijos" /><br><br>
                     <label class="divicion negrita" for="">Activos Totales: </label>
-                    <input placeholder="0" value="0" type="number" id="totalactivos" class="caja" disabled>
+                    <input placeholder="0" value="" type="number" id="totalactivos" class="caja" disabled>
 
-                    <label class="balance negrita" for="activos">Activos = <input placeholder="0" value="0" class="especial caja" type="number" id="activos" disabled></label>
+                    <!-- <label class="balanced negrita" for="activos">Activos = <input placeholder="0" value="" class="especial" type="number" id="activos" disabled></label> -->
                 </div>
 
-                <div class="col-md-6">
-                    <!-- <div class="col-md-5 offset-md-2"> -->
+                <div class="container center col-md-6">
                     <h4>Pasivos </h4><br>
                     <label class="divicion negrita" for="pasivoscirculantes">Pasivos Circulantes:</label>
-                    <input placeholder="0" value="0" type="number" id="pasivoscirculantes" class="caja" /><br><br>
+                    <input placeholder="0" value="" type="number" id="pasivoscirculantes" class="caja" /><br><br>
                     <label class="divicion" for="pasivoslargoplazo">Pasivos a Largo Plazo:</label>
-                    <input placeholder="0" value="0" type="number" id="pasivoslargoplazo" /><br>
+                    <input placeholder="0" value="" type="number" id="pasivoslargoplazo" /><br>
                     <label class="divicion negrita">Pasivos Totales</label>
-                    <input placeholder="0" value="0" class="caja" type="number" id="totalpasivos" disabled><br><br><br>
+                    <input placeholder="0" value="" class="caja" type="number" id="totalpasivos" disabled><br><br><br>
 
                     <h4>Patrimonio</h4><br>
                     <label class="divicion" for="capitalcomun">Capital Comun:</label>
-                    <input placeholder="0" value="0" type="number" id="capitalcomun" />
+                    <input placeholder="0" value="" type="number" id="capitalcomun" />
 
-                    <label class="balance negrita" for="pmasc">Pasivos + Capital = <input placeholder="0" value="0" class="especial caja" type="number" id="pmasc" disabled/></label>
-
+                    <!-- <label class="balanced negrita" for="pmasc">Pasivos + Capital = <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled/></label> -->
                 </div>
             </div>
-        </form>
 
-        <button type="button" class="btn btn-primary" onclick="obtenerdatos(); calcularRazones()">Calcular</button>
+            <!-- parte del balance general de abajo -->
+            <!-- <div class="row center col-md-12 offset-1"> -->
+            <div class="container center row col-md-12" style="padding-top: 0%;">
+                <div class="container center col-md-6">
+                    <label class="balanced negrita" for="activos">Activos = </label>
+                    <input placeholder="0" value="" class="especial" type="number" id="activos" disabled>
+                </div>
+                <div class="container col-md-6">
+                    <label class="balanced center negrita" for="pmasc">Pasivos + Capital = </label>
+                    <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled/>
+                </div>
+            </div>
+
+        </form>
+        <div class="container col-md-12">
+            <button type="button" class="btn btn-primary col-md-2" onclick="obtenerdatos(); calcularRazones()">Calcular</button>
+        </div>
         <!-- primary success warning danger -->
+    </div>
+
+    <!-- cuadro de razones financieras -->
+
+    <div>
+        <form action="" class="container" id="razonesfinancieras" name="razonesfinancieras">
+            <h2>
+                Razones Financieras
+            </h2>
+            <div class="container">
+                <!-- style="width: 100%" -->
+                <table class="table table-bordered" cellspacing="" id="tabla" </table>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Razón Financiera</th>
+                            <th>Formulas</th>
+                            <th>Cálculo</th>
+                            <th>Promedio</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+
+                    <tr id="">
+                        <td class="" id="">Razón Circulante</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r1"></td>
+                        <td class="center" id="" class="tdinput"><input class="Ttypeinput" type="number" name="" id="c1"></td>
+                        <td class="center" id="estado1"></td>
+                    </tr>
+                    <tr>
+                        <td>Razón Rápida</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r2"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c2"></td>
+                        <td class="center" id="estado2"></td>
+                    </tr>
+                    <tr>
+                        <td>Rotación de Inventario</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r3"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c3"></td>
+                        <td class="center" id="estado3"></td>
+                    </tr>
+                    <tr>
+                        <td>Diás de Ventas Pendientes de Cobro (DSO)</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r4"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c4"></td>
+                        <td class="center" id="estado4"></td>
+                    </tr>
+                    <tr>
+                        <td>Rotación de los Activos Fijos</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r5"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c5"></td>
+                        <td class="center" id="estado5"></td>
+                    </tr>
+                    <tr>
+                        <td>Rotación de los Activos Totales</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r6"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c6"></td>
+                        <td class="center" id="estado6"></td>
+                    </tr>
+                    <tr>
+                        <td>Deuda Total a Activos Totales</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r7"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c7"></td>
+                        <td class="center" id="estado7"></td>
+                    </tr>
+                    <tr>
+                        <td>Rotación del Interés (TIE)</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r8"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c8"></td>
+                        <td class="center" id="estado8"></td>
+                    </tr>
+                    <tr>
+                        <td>Margen de Utilidad Sobre Ventas</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r9"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c9"></td>
+                        <td class="center" id="estado9"></td>
+                    </tr>
+                    <tr>
+                        <td>Generación Básica de Utilidades</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r10"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c10"></td>
+                        <td class="center" id="estado10"></td>
+                    </tr>
+                    <tr>
+                        <td>Rendimiento Sobre los Activos Totales (ROA)</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r11"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c11"></td>
+                        <td class="center" id="estado11"></td>
+                    </tr>
+                    <tr>
+                        <td>Rendimiento Sobre el Capital (ROE)</td>
+                        <td></td>
+                        <!-- <td></td> -->
+                        <td class="center" id="r12"></td>
+                        <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c12"></td>
+                        <td class="center" id="estado12"></td>
+                    </tr>
+
+                </table><br>
+            </div>
+            <div class="center">
+                <button type="button" class="btn btn-primary col-md-2" onclick="comparacion()">Comparar</button>
+            </div>
+            <br><br>
+
+            <br><br><br>
+        </form>
     </div>
 
     <br><br>

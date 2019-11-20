@@ -67,19 +67,20 @@ function obtenerdatos() {
 }
 
 function calcularRazones() {
-    var ventasNetas = parseInt(document.getElementById("ventasnetas").value);
-    // var EBIT = parseInt(document.getElementById("utilidadantesimpuestosintereses").value);
-    var EBIT = parseInt(document.getElementById("utilidadoperativa").value);
-    var intereses = parseInt(document.getElementById("intereses").value);
-    var ingresosNetos = parseInt(document.getElementById("utilidadneta").value);
-    var cuentasporcobrar = parseInt(document.getElementById("cuentasporcobrar").value);
-    var inventario = parseInt(document.getElementById("inventario").value);
-    var activoscirculantes = parseInt(document.getElementById("activoscirculantes").value);
-    var activosfijos = parseInt(document.getElementById("activosfijos").value);
-    var activostotales = parseInt(document.getElementById("totalactivos").value);
-    var pasivoscirculantes = parseInt(document.getElementById("pasivoscirculantes").value);
-    var pasivostotales = parseInt(document.getElementById("totalpasivos").value);
-    var capitalcomun = parseInt(document.getElementById("capitalcomun").value);
+    var ventasNetas = parseInt(document.getElementById("ventasnetas").value) + 0;
+    // var EBIT = parseInt(document.getElementById("utilidadantesimpuestosintereses").value)+0;
+    var EBIT = parseInt(document.getElementById("utilidadoperativa").value) + 0;
+    // var intereses = parseInt(document.getElementById("intereses").value)+0;
+    var impuestos = parseInt(document.getElementById("impuestos").value) + 0;
+    var ingresosNetos = parseInt(document.getElementById("utilidadneta").value) + 0;
+    var cuentasporcobrar = parseInt(document.getElementById("cuentasporcobrar").value) + 0;
+    var inventario = parseInt(document.getElementById("inventario").value) + 0;
+    var activoscirculantes = parseInt(document.getElementById("activoscirculantes").value) + 0;
+    var activosfijos = parseInt(document.getElementById("activosfijos").value) + 0;
+    var activostotales = parseInt(document.getElementById("totalactivos").value) + 0;
+    var pasivoscirculantes = parseInt(document.getElementById("pasivoscirculantes").value) + 0;
+    var pasivostotales = parseInt(document.getElementById("totalpasivos").value) + 0;
+    var capitalcomun = parseInt(document.getElementById("capitalcomun").value) + 0;
 
     var R1 = activoscirculantes / pasivoscirculantes;
     var R2 = (activoscirculantes - inventario) / pasivoscirculantes;
@@ -88,17 +89,18 @@ function calcularRazones() {
     var R5 = ventasNetas / activosfijos;
     var R6 = ventasNetas / activostotales;
     var R7 = pasivostotales / activostotales;
-    var R8 = EBIT / intereses;
+    // var R8 = EBIT / intereses;
+    var R8 = EBIT / impuestos;
     var R9 = ingresosNetos / ventasNetas;
     var R10 = EBIT / activostotales;
     var R11 = ingresosNetos / activostotales;
     var R12 = ingresosNetos / capitalcomun;
 
     var razones = [R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12];
-
-
-    for (ted = 0; ted < razones.length; ted++) {
-        document.getElementById('r' + (ted + 1)).innerHTML = razones[ted].toFixed(2);
+    // console.log(razones);
+    // llenar tabla con valores
+    for (let ted = 0; ted < razones.length; ted++) {
+        document.getElementById('r' + (ted + 1)).innerHTML = (razones[ted].toFixed(2)).toString();
         // element = razones[ted];
     }
 
@@ -109,16 +111,20 @@ function comparacion() {
     var razones = [];
     var comparar = [];
 
-    for (ted = 0; ted < array.length; ted++) {
-        razones.push(parseInt(document.getElementById('r' + (ted + 1)).value));
-        comparar.push(parseInt(document.getElementById('estado' + (ted + 1)).value));
+    for (let ted = 0; ted < 12; ted++) {
+        razones.push(parseFloat(document.getElementById('r' + (ted + 1)).innerText));
+        // razones.push(ted);
+        comparar.push(parseFloat(document.getElementById('c' + (ted + 1)).value));
     }
-    // console.log(razones, comparar);
-    for (ted = 0; ted < razones.length; ted++) {
+    console.log(razones, comparar);
+    // llenar tabla con la comparativa
+    for (let ted = 0; ted < razones.length; ted++) {
         if (razones[ted] > comparar[ted]) {
             document.getElementById('estado' + (ted + 1)).innerText = "ALTO";
+            document.getElementById('estado' + (ted + 1)).style.backgroundColor = "green";
         } else {
             document.getElementById('estado' + (ted + 1)).innerHTML = "BAJO";
+            document.getElementById('estado' + (ted + 1)).style.backgroundColor = "red";
         }
         // element = razones[ted];
     }
@@ -139,15 +145,17 @@ inputsArray
         input.addEventListener('change', () => {
             obtenerdatos();
             calcularRazones();
+            comparacion();
         });
     });
 
-// JavaScript + jQuery
+
+// // JavaScript + jQuery
 // function resizeInput() {
 //     $(this).attr('size', $(this).val().length);
 // }
 
-// $('input[type="text"]')
+// $('input[type="number"]')
 //     // event handler
 //     .keyup(resizeInput)
 //     // resize on page load
