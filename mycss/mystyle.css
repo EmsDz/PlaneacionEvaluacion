@@ -103,8 +103,11 @@ h2 {
     margin-bottom: 30px;
 }
 
-form#balancegeneral,
-#estadoresultado {
+
+/* form#balancegeneral,
+#estadoresultado { */
+
+.g {
     border: 2px solid rgb(53, 46, 46);
     /* padding-bottom: 30px; */
     /* padding-left: 30px; */

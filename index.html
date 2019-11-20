@@ -7,21 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- My CSS -->
-    <link rel="stylesheet" href="mycss/mystyle.css">
-    <link rel="stylesheet" href="mycss/mystyletabla.css">
+    <link rel="stylesheet" href="./mycss/mystyle.css">
+    <link rel="stylesheet" href="./mycss/mystyletabla.css">
     <!-- Doc Name -->
     <title>Planeacion y Evaluacion</title>
 </head>
 
 <body>
+    <!-- estado de resultado -->
     <div class="fcolor container center row col-md-12">
         <form action="/my-handling-form-page" method="post" class="container center col-md-4" id="estadoresultado" name="estadoresultado" type="">
 
             <h2 class="">Estado De Resultado</h2>
 
-            <div class="container center row">
+            <div class="container center">
 
                 <label class="espacio" for="ventasnetas">+ Ventas Netas: </label>
                 <input placeholder="0" value="" type="number" id="ventasnetas" /><br>
@@ -47,12 +48,6 @@
                 <label class="espacio" for="gastosfinancieros">- Gastos Financieros: </label>
                 <input placeholder="0" value="" type="number" id="gastosfinancieros" /><br>
 
-                <!-- <label class="espacio negrita" for="utilidadantesimpuestosintereses">UTILIDAD ANTES DE IMTERESES E IMPUESTOS (EBIT): </label>
-                <input placeholder="0" value="" type="number" id="utilidadantesimpuestosintereses" class="caja" disabled><br></br>
-
-                <label class="espacio" for="intereses">Intereses: </label>
-                <input placeholder="0" value="" type="number" id="intereses" /><br> -->
-
                 <label class="espacio negrita" for="utilidadantesimpuestos">= UTILIDAD ANTES DE IMPUESTOS (EBT): </label>
                 <input placeholder="0" value="" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
@@ -63,6 +58,7 @@
                 <input placeholder="0" value="" type="number" id="utilidadneta" class="caja" disabled><br><br>
             </div>
         </form>
+        <!-- end estado de resultado -->
 
 
         <form action="" class="container center col-md-6" id="balancegeneral" name="balancegeneral">
@@ -108,7 +104,7 @@
 
             <!-- parte del balance general de abajo -->
             <!-- <div class="row center col-md-12 offset-1"> -->
-            <div class="container center row col-md-12" style="padding-top: 0%;">
+            <div class="container center row col-md-12" style="padding-top: 20%;">
                 <div class="container center col-md-6">
                     <label class="balanced negrita" for="activos">Activos = </label>
                     <input placeholder="0" value="" class="especial" type="number" id="activos" disabled>
@@ -259,7 +255,7 @@
     <!-- My Script -->
     <script type="text/javascript" src="jscript/app.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 
 </html>
