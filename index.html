@@ -16,9 +16,43 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
+        <a class=" navbar-brand"href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-target="home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#estados" data-target="estados">Estados Fin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tablarazones" data-target="tablarazones">Razones Fin</a>
+                </li>
+                <!-- dropdown -->
+                <!-- <div class="dropdown">                    <button class="dropbtn">Dropdown</button>                    <div class="dropdown-content">                        <a href="#">Link 1</a>   <a href="#">Link 2</a>     <a href="#">Link 3</a>  </div>
+                </div> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- estado de resultado -->
-    <div class="fcolor container center row col-md-12">
-        <form action="/my-handling-form-page" method="post" class="container center col-md-4" id="estadoresultado" name="estadoresultado" type="">
+    <div id="estados" class="fcolor container center row col-md-12">
+        <form action="/my-handling-form" method="post" class="container center col-md-4" id="estadoresultado" name="estadoresultado" type="">
 
             <h2 class="">Estado De Resultado</h2>
 
@@ -48,7 +82,8 @@
                 <label class="espacio" for="gastosfinancieros">- Gastos Financieros: </label>
                 <input placeholder="0" value="" type="number" id="gastosfinancieros" /><br>
 
-                <label class="espacio negrita" for="utilidadantesimpuestos">= UTILIDAD ANTES DE IMPUESTOS (EBT): </label>
+                <label class="espacio negrita" for="utilidadantesimpuestos">= UTILIDAD ANTES DE IMPUESTOS (EBT):
+                </label>
                 <input placeholder="0" value="" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
                 <label class="espacio" for="impuestos">- Impuestos: </label>
@@ -76,13 +111,13 @@
                     <label class="divicion" for="inventario">Inventario:</label>
                     <input placeholder="0" value="" type="number" id="inventario" /><br>
                     <label class="divicion negrita" for="activoscirculantes">Activos Circulantes Totales:</label>
-                    <input placeholder="0" value="" type="number" id="activoscirculantes" class="caja" disabled/><br><br>
+                    <input placeholder="0" value="" type="number" id="activoscirculantes" class="caja" disabled /><br><br>
                     <label class="divicion negrita" for="activosfijos">Activos Fijos:</label>
                     <input placeholder="0" value="" type="number" id="activosfijos" /><br><br>
                     <label class="divicion negrita" for="">Activos Totales: </label>
                     <input placeholder="0" value="" type="number" id="totalactivos" class="caja" disabled>
 
-                    <!-- <label class="balanced negrita" for="activos">Activos = <input placeholder="0" value="" class="especial" type="number" id="activos" disabled></label> -->
+                    <!-- <label class="balanced negrita"for="activos">Activos = <input placeholder="0"value=""class="especial"type="number"id="activos"disabled></label> -->
                 </div>
 
                 <div class="container center col-md-6">
@@ -98,7 +133,7 @@
                     <label class="divicion" for="capitalcomun">Capital Comun:</label>
                     <input placeholder="0" value="" type="number" id="capitalcomun" />
 
-                    <!-- <label class="balanced negrita" for="pmasc">Pasivos + Capital = <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled/></label> -->
+                    <!-- <label class="balanced negrita"for="pmasc">Pasivos + Capital = <input placeholder="0"value=""class="especial"type="number"id="pmasc"disabled/></label> -->
                 </div>
             </div>
 
@@ -111,7 +146,7 @@
                 </div>
                 <div class="container col-md-6">
                     <label class="balanced center negrita" for="pmasc">Pasivos + Capital = </label>
-                    <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled/>
+                    <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled />
                 </div>
             </div>
 
@@ -124,24 +159,23 @@
 
     <!-- cuadro de razones financieras -->
 
-    <div>
-        <form action="" class="container" id="razonesfinancieras" name="razonesfinancieras">
+    <div id="tablarazones" class="container col-md-12">
+        <form action="" class="container col-md-10" id="razonesfinancieras" name="razonesfinancieras">
             <h2>
                 Razones Financieras
             </h2>
             <div class="container">
-                <!-- style="width: 100%" -->
-                <table class="table table-bordered" cellspacing="" id="tabla" </table>
+                <!-- style="width: 100%"-->
+                <table class="table table-bordered" cellspacing="" id="tabla">
                     <thead class="thead-dark">
                         <tr>
                             <th>Razón Financiera</th>
                             <th>Formulas</th>
                             <th>Cálculo</th>
-                            <th>Promedio</th>
+                            <th colspan="">Promedio</th>
                             <th>Estado</th>
                         </tr>
                     </thead>
-
                     <tr id="">
                         <td class="" id="">Razón Circulante</td>
                         <td></td>
@@ -244,9 +278,6 @@
             <div class="center">
                 <button type="button" class="btn btn-primary col-md-2" onclick="comparacion()">Comparar</button>
             </div>
-            <br><br>
-
-            <br><br><br>
         </form>
     </div>
 
@@ -254,6 +285,8 @@
 
     <!-- My Script -->
     <script type="text/javascript" src="jscript/app.js"></script>
+    <!-- cambiar visibilidad -->
+    <!-- <script src="./jscript/spa.js"></script> -->
 
     <script src="./js/bootstrap.min.js"></script>
 </body>

@@ -103,15 +103,17 @@ h2 {
     margin-bottom: 30px;
 }
 
-
-/* form#balancegeneral,
-#estadoresultado { */
-
-.g {
+form {
     border: 2px solid rgb(53, 46, 46);
-    /* padding-bottom: 30px; */
+    padding-bottom: 30px;
     /* padding-left: 30px; */
-    /* margin: 30px 20px 30px 80px; */
+    margin: 10% 20px 30px 80px;
+}
+
+#estados,
+#tablarazones {
+    margin-top: 5%;
+    display: flex;
 }
 
 .boton {
@@ -119,7 +121,71 @@ h2 {
 }
 
 
+/* efecto de cambio */
+
+.page {
+    /* display: none; */
+    display: none;
+    /* width: 100%; */
+    /* min-height: 100%; */
+    /* position: fixed; */
+}
+
+.active {
+    /* display: block; */
+    display: flex;
+}
+
+
 /*body {
     /* background-color: #007BFF; * /
     background-color: #16def9;
 }*/
+
+/* navbar */
+.navbar {
+    top: 0;
+    /* position: fixed; */
+    /* position: sticky; */
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+nav {
+    float: left;
+    /* Desplazamos el nav hacia la izquierda */
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    /* Limpiamos errores de float */
+}
+
+nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav ul li a {
+    display: block;
+    /* Convertimos los elementos a en elementos bloque para manipular el padding */
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background: #3ead47;
+}
+
+/* dropdown */
+/* .dropbtn {    background-color: #4CAF50;    color: white;    padding: 16px;    font-size: 16px;    border: none;}
+  .dropdown {    position: relative;    display: inline-block;  }
+  .dropdown-content {    display: none;    position: absolute;    background-color: #f1f1f1;    min-width: 160px;    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    z-index: 1;  }
+  .dropdown-content a {    color: black;    padding: 12px 16px;    text-decoration: none;    display: block;  }
+  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown:hover .dropdown-content {display: block;}  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;} */

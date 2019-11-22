@@ -29,12 +29,11 @@ h2 {
     margin-bottom: 30px;
 }
 
-form {
-    border: 2px solid rgb(53, 46, 46);
-    padding-bottom: 30px;
-    /* padding-left: 30px; */
-    margin: 30px 20px 30px 80px;
-}
+/* form#...{} */
+/* #razonesfinancieras {
+    padding-bottom: 0%;
+    margin-bottom: 20px;
+} */
 
 .boton {
     background-color: green;
@@ -78,8 +77,10 @@ td {
     background-color: transparent;
 }
 
+/* efecto de texto vertical */
 
-/* 
+
+/*
 The object-fit property can have the following values:
 
     fill - This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished to fit
@@ -87,5 +88,31 @@ The object-fit property can have the following values:
     cover - The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit
     none - The replaced content is not resized
     scale-down - The content is sized as if none or contain were specified (would result in a smaller concrete object size)
+
+*/
+
+/*
+th
+vertical-align: bottom;
+height: 200px;
+
+
+span
+transform: rotate(-90deg);
+display: inline-block;
+transform-origin: left;
+white-space: nowrap;
+margin: 0 0 20px 10px;
+width: 20px;
+height: 20px;
+
+position: absolute;
+
+
+- span
+- colspan
+- rowspan
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_rowspan
+
 
 */
