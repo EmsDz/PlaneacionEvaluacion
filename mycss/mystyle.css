@@ -17,8 +17,7 @@ label {
 }
 
 .espacio {
-    /* width: 250px; */
-    /* width: 200px; */
+    /* width: 250px;*/
     width: 180px;
 }
 
@@ -113,6 +112,11 @@ form#balancegeneral,
 
 .boton {
     background-color: green;
+}
+
+.navbar {
+    top: 0;
+    position: sticky;
 }
 
 
