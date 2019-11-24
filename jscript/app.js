@@ -100,7 +100,9 @@ function calcularRazones() {
     // console.log(razones);
     // llenar tabla con valores
     for (let ted = 0; ted < razones.length; ted++) {
-        document.getElementById('r' + (ted + 1)).innerHTML = (razones[ted].toFixed(2)).toString();
+        if (razones[ted] === Number) {
+            document.getElementById('r' + (ted + 1)).innerHTML = (razones[ted].toFixed(2)).toString();
+        }
         // element = razones[ted];
     }
 
@@ -110,7 +112,7 @@ function comparacion() {
 
     var razones = [];
     var comparar = [];
-
+    // obtener datos de la tabla
     for (let ted = 0; ted < 12; ted++) {
         razones.push(parseFloat(document.getElementById('r' + (ted + 1)).innerText));
         // razones.push(ted);
@@ -119,12 +121,14 @@ function comparacion() {
     console.log(razones, comparar);
     // llenar tabla con la comparativa
     for (let ted = 0; ted < razones.length; ted++) {
-        if (razones[ted] > comparar[ted]) {
-            document.getElementById('estado' + (ted + 1)).innerText = "ALTO";
-            document.getElementById('estado' + (ted + 1)).style.backgroundColor = "green";
-        } else {
-            document.getElementById('estado' + (ted + 1)).innerHTML = "BAJO";
-            document.getElementById('estado' + (ted + 1)).style.backgroundColor = "red";
+        if (razones[ted] === Number && comparar[ted] === Number) {
+            if (razones[ted] > comparar[ted]) {
+                document.getElementById('estado' + (ted + 1)).innerText = "ALTO";
+                document.getElementById('estado' + (ted + 1)).style.backgroundColor = "green";
+            } else {
+                document.getElementById('estado' + (ted + 1)).innerHTML = "BAJO";
+                document.getElementById('estado' + (ted + 1)).style.backgroundColor = "red";
+            }
         }
         // element = razones[ted];
     }

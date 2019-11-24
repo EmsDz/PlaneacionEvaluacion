@@ -6,7 +6,7 @@
 input {
     border: 1px solid;
     border-radius: 6px;
-    width: 100px;
+    /* width: 100px; */
     height: 25px;
     outline: none;
     text-align: right;
@@ -16,11 +16,12 @@ input {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .center {
     justify-content: center;
+    /* text-align: center; */
 }
 
 h2 {
@@ -47,8 +48,14 @@ table {
     width: 60%;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) { */
+/* tr.t:nth-child(even) { */
+tr.t {
     background-color: #72e6d4;
+}
+
+tr {
+    background-color: hsl(180, 65%, 51%);
 }
 
 td {
@@ -61,8 +68,9 @@ td {
     /* height: 5px; */
     /* width: 5px; */
     text-align: center;
-    object-position: center;
-    object-fit: fill;
+    /* object-position: center; */
+    /* object-fit: fill; */
+    vertical-align: middle !important;
 }
 
 .Ttypeinput {
@@ -71,7 +79,11 @@ td {
     height: auto; */
     outline: none;
     text-align: right;
-    max-width: 500px;
+    /* object-fit: fill; */
+    /* display: flex; */
+    /* max-width: 500px; 200px;*/
+    max-width: 0px;
+    /* min-width: 40px; */
     margin: auto;
     padding-right: 8px;
     background-color: transparent;
@@ -79,6 +91,95 @@ td {
 
 /* efecto de texto vertical */
 
+.verticalth {
+    /* vertical-align: bottom !important; */
+    vertical-align: bottom !important;
+    /* height: 200px; */
+    /* height: auto; */
+    /* height: fit-content; */
+    /* height: 100%; */
+    /* height: 180px; */
+    height: auto;
+    /* width: 180px; */
+    /* height: fit-content; */
+    /* margin: 0; */
+    /* padding: 40px !important; */
+    text-align: center;
+    /* vertical-align: middle; */
+
+}
+
+.verticalspam {
+    transform: rotate(-90deg);
+    display: inline-block;
+    /* display: flex; */
+    /* display: inline-block; */
+    transform-origin: left;
+    /* transform-origin: center; */
+    /* white-space: nowrap; */
+    margin: 10px 0 5px 10px;
+    /* width: 80px; */
+    /* width: 180px; */
+    width: auto;
+    height: auto;
+    /* text-align: justify; */
+    /* vertical-align: middle; */
+
+    position: absolute;
+}
+
+/* otra forma */
+th.rotate {
+    /* Something you can count on -*/
+    /* height: 140px; -*/
+    /* white-space: nowrap; -*/
+
+    /* height: fit-content; */
+    /* vertical-align: bottom; */
+    vertical-align: middle;
+    /* align-content: flex-end; */
+    /* object-position: bottom; */
+    /* text-align: center; */
+    /* object-position: center; */
+    /* align-content: center; */
+    /* text-align: left; */
+    /* text-align: center; */
+    /* text-align: end; */
+
+}
+
+th.rotate>div {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    height: 75px;
+    margin: 0%;
+    text-align: center;
+    /* text-align: end; */
+    display: flex;
+    padding-right: 30px;
+    width: 92px;
+    /* transform:
+        /* Magic Numbers * /
+        translate(25px, 51px)
+        /* 45 is really 360 - 45 * /
+        rotate(315deg);
+    width: 30px; -*/
+}
+
+th.rotate>div>span {
+    /* border-bottom: 1px solid #ccc; -*/
+    /*-*/
+    /* padding: 5px 10px; */
+    display: flex;
+    width: 44px;
+
+    /* height: 100px; */
+}
+
+#cent {
+    padding-right: 20px
+}
 
 /*
 The object-fit property can have the following values:

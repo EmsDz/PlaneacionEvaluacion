@@ -17,26 +17,26 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
-        <a class=" navbar-brand"href="#">Navbar</a>
+        <a class=" navbar-brand"href="#">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                     <a class="nav-link" href="#" data-target="home">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#estados" data-target="estados">Estados Financieros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#estados" data-target="estados">Estados Fin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tablarazones" data-target="tablarazones">Razones Fin</a>
+                    <a class="nav-link" href="#tablarazones" data-target="tablarazones">Razones Financieras</a>
                 </li>
                 <!-- dropdown -->
                 <!-- <div class="dropdown">                    <button class="dropbtn">Dropdown</button>                    <div class="dropdown-content">                        <a href="#">Link 1</a>   <a href="#">Link 2</a>     <a href="#">Link 3</a>  </div>
                 </div> -->
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
@@ -46,7 +46,7 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -89,7 +89,7 @@
                 <label class="espacio" for="impuestos">- Impuestos: </label>
                 <input placeholder="0" value="" type="number" id="impuestos" /><br>
 
-                <label class="espacio negrita" for="utilidadneta">= UTILIDAD NETA: </label>
+                <label class="espacio negrita" for="utilidadneta">= INGRESOS NETOS: </label>
                 <input placeholder="0" value="" type="number" id="utilidadneta" class="caja" disabled><br><br>
             </div>
         </form>
@@ -169,6 +169,7 @@
                 <table class="table table-bordered" cellspacing="" id="tabla">
                     <thead class="thead-dark">
                         <tr>
+                            <th>Tipo Razón</th>
                             <th>Razón Financiera</th>
                             <th>Formulas</th>
                             <th>Cálculo</th>
@@ -176,97 +177,123 @@
                             <th>Estado</th>
                         </tr>
                     </thead>
-                    <tr id="">
+                    <!-- contenedor de tipo de razon financiera -->
+                    <tr>
+                        <th class="rotate" rowspan="3">
+                            <div><span class="">Liquidez</span></div>
+                        </th>
+                    </tr>
+                    <tr id="" class="t">
+                        <!-- <th class="rotate" rowspan="3">
+                            <div><span class="">Liquidez</span></div>
+                        </th> -->
                         <td class="" id="">Razón Circulante</td>
-                        <td></td>
+                        <td>Activos Circ / Pasivos Circ</td>
                         <!-- <td></td> -->
                         <td class="center" id="r1"></td>
                         <td class="center" id="" class="tdinput"><input class="Ttypeinput" type="number" name="" id="c1"></td>
                         <td class="center" id="estado1"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Razón Rápida</td>
-                        <td></td>
+                        <td>(Activos Circ - Invent) / Passivos Circ</td>
                         <!-- <td></td> -->
                         <td class="center" id="r2"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c2"></td>
                         <td class="center" id="estado2"></td>
                     </tr>
+                    <!-- contenedor de tipo de razon financiera -->
                     <tr>
+                        <th class="rotate" rowspan="5">
+                            <div id="cent"><span>Admin de Activos</span></div>
+                        </th>
+                    </tr>
+                    <tr class="t">
                         <td>Rotación de Inventario</td>
-                        <td></td>
+                        <td>Ventas / Inventario</td>
                         <!-- <td></td> -->
                         <td class="center" id="r3"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c3"></td>
                         <td class="center" id="estado3"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Diás de Ventas Pendientes de Cobro (DSO)</td>
-                        <td></td>
+                        <td>CxC / (Ventas anuales / 360)</td>
                         <!-- <td></td> -->
                         <td class="center" id="r4"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c4"></td>
                         <td class="center" id="estado4"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Rotación de los Activos Fijos</td>
-                        <td></td>
+                        <td>Ventas / Activos fijos netos</td>
                         <!-- <td></td> -->
                         <td class="center" id="r5"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c5"></td>
                         <td class="center" id="estado5"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Rotación de los Activos Totales</td>
-                        <td></td>
+                        <td>Ventas / Activos totales</td>
                         <!-- <td></td> -->
                         <td class="center" id="r6"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c6"></td>
                         <td class="center" id="estado6"></td>
                     </tr>
+                    <!-- contenedor de tipo de razon financiera -->
                     <tr>
+                        <th class="rotate" rowspan="3">
+                            <div id="cent"><span>Admin de Deudas</span></div>
+                        </th>
+                    </tr>
+                    <tr class="t">
                         <td>Deuda Total a Activos Totales</td>
-                        <td></td>
+                        <td>Deuda total / Activos Totales</td>
                         <!-- <td></td> -->
                         <td class="center" id="r7"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c7"></td>
                         <td class="center" id="estado7"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Rotación del Interés (TIE)</td>
-                        <td></td>
+                        <td>EBIT / Cargos por intereses</td>
                         <!-- <td></td> -->
                         <td class="center" id="r8"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c8"></td>
                         <td class="center" id="estado8"></td>
                     </tr>
                     <tr>
+                        <th class="rotate" rowspan="5">
+                            <div><span class="">Rentabilidad</span></div>
+                        </th>
+                    </tr>
+                    <tr class="t">
                         <td>Margen de Utilidad Sobre Ventas</td>
-                        <td></td>
+                        <td>Ingresos Netos / Ventas</td>
                         <!-- <td></td> -->
                         <td class="center" id="r9"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c9"></td>
                         <td class="center" id="estado9"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Generación Básica de Utilidades</td>
-                        <td></td>
+                        <td>EBIT / Activos Totales</td>
                         <!-- <td></td> -->
                         <td class="center" id="r10"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c10"></td>
                         <td class="center" id="estado10"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Rendimiento Sobre los Activos Totales (ROA)</td>
-                        <td></td>
+                        <td>Ingresos Netos / Activos totales</td>
                         <!-- <td></td> -->
                         <td class="center" id="r11"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c11"></td>
                         <td class="center" id="estado11"></td>
                     </tr>
-                    <tr>
+                    <tr class="t">
                         <td>Rendimiento Sobre el Capital (ROE)</td>
-                        <td></td>
+                        <td>Ingresos Netos / Capital contable Común</td>
                         <!-- <td></td> -->
                         <td class="center" id="r12"></td>
                         <td class="tdinput"><input class="Ttypeinput" type="number" name="" id="c12"></td>
