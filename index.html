@@ -17,7 +17,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class=" navbar-brand"href="#">Home</a>
+        <a class=" navbar-brand" href="#home" onclick="showData('home')">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,30 +28,25 @@
                     <a class="nav-link" href="#" data-target="home">Home <span class="sr-only">(current)</span></a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#estados" data-target="estados">Estados Financieros</a>
+                    <a class="nav-link" href="#estados" data-target="estados" onclick="showData('estados')">Estados Financieros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#tablarazones" data-target="tablarazones">Razones Financieras</a>
+                    <a class="nav-link" href="#tablarazones" data-target="tablarazones" onclick="showData('tablarazones')">Razones Financieras</a>
                 </li>
-                <!-- dropdown -->
-                <!-- <div class="dropdown">                    <button class="dropbtn">Dropdown</button>                    <div class="dropdown-content">                        <a href="#">Link 1</a>   <a href="#">Link 2</a>     <a href="#">Link 3</a>  </div>
-                </div> -->
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li> -->
             </ul>
         </div>
     </nav>
+    <div id="home" class="Show">
+        <div>
+            <br><br><br>
+            <h1>home</h1>
+            <h1>ome</h1>
+            <h1>me</h1>
+            <h1>e</h1>
+        </div>
+    </div>
     <!-- estado de resultado -->
-    <div id="estados" class="fcolor container center row col-md-12">
+    <div id="estados" class="fcolor container center row col-md-12 Hide">
         <form action="/my-handling-form" method="post" class="container center col-md-4" id="estadoresultado" name="estadoresultado" type="">
 
             <h2 class="">Estado De Resultado</h2>
@@ -86,7 +81,7 @@
                 </label>
                 <input placeholder="0" value="" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
-                <label class="espacio" for="impuestos">- Impuestos: </label>
+                <label class="espacio" for="impuestos">- Impuestos En %: </label>
                 <input placeholder="0" value="" type="number" id="impuestos" /><br>
 
                 <label class="espacio negrita" for="utilidadneta">= INGRESOS NETOS: </label>
@@ -122,16 +117,32 @@
 
                 <div class="container center col-md-6">
                     <h4>Pasivos </h4><br>
+                    <label class="divicion" for="prestamobancario">Prestamos Bancarios:</label>
+                    <input placeholder="0" value="" type="number" id="prestamobancario" /><br>
+                    <label class="divicion" for="proveedores">Proveedores:</label>
+                    <input placeholder="0" value="" type="number" id="proveedores" /><br>
                     <label class="divicion negrita" for="pasivoscirculantes">Pasivos Circulantes:</label>
                     <input placeholder="0" value="" type="number" id="pasivoscirculantes" class="caja" /><br><br>
+                    <label class="divicion" for="documentosporpagar">Documentos Por Pagar:</label>
+                    <input placeholder="0" value="" type="number" id="documentosporpagar" /><br>
+                    <label class="divicion" for="deudahipotecaria">Deuda Hipotecaria:</label>
+                    <input placeholder="0" value="" type="number" id="deudahipotecaria" /><br>
                     <label class="divicion" for="pasivoslargoplazo">Pasivos a Largo Plazo:</label>
                     <input placeholder="0" value="" type="number" id="pasivoslargoplazo" /><br>
+                    <label class="divicion negrita" for="pasivosfijos">Pasivos Fijos:</label>
+                    <input placeholder="0" value="" type="number" id="pasivosfijos" class="caja" /><br><br>
                     <label class="divicion negrita">Pasivos Totales</label>
                     <input placeholder="0" value="" class="caja" type="number" id="totalpasivos" disabled><br><br><br>
 
                     <h4>Patrimonio</h4><br>
-                    <label class="divicion" for="capitalcomun">Capital Comun:</label>
-                    <input placeholder="0" value="" type="number" id="capitalcomun" />
+                    <label class="divicion" for="capitalsocial">Capital Social:</label>
+                    <input placeholder="0" value="" type="number" id="capitalsocial" /><br>
+                    <label class="divicion" for="reservadeutilidades">Reserva De Utilidades:</label>
+                    <input placeholder="0" value="" type="number" id="reservadeutilidades" /><br>
+                    <label class="divicion" for="utilidaddelejercicio">Utilidad Del Ejercicio:</label>
+                    <input placeholder="0" value="" type="number" id="utilidaddelejercicio" /><br>
+                    <label class="divicion negrita" for="capitalcomun">Capital Comun:</label>
+                    <input placeholder="0" value="" class="caja" type="number" id="capitalcomun" disabled>
 
                     <!-- <label class="balanced negrita"for="pmasc">Pasivos + Capital = <input placeholder="0"value=""class="especial"type="number"id="pmasc"disabled/></label> -->
                 </div>
@@ -151,15 +162,15 @@
             </div>
 
         </form>
-        <div class="container col-md-12">
+        <!-- <div class="container col-md-12">
             <button type="button" class="btn btn-primary col-md-2" onclick="obtenerdatos(); calcularRazones()">Calcular</button>
-        </div>
+        </div> -->
         <!-- primary success warning danger -->
     </div>
 
     <!-- cuadro de razones financieras -->
 
-    <div id="tablarazones" class="container col-md-12">
+    <div id="tablarazones" class="container col-md-12 Hide">
         <form action="" class="container col-md-10" id="razonesfinancieras" name="razonesfinancieras">
             <h2>
                 Razones Financieras
@@ -302,9 +313,9 @@
 
                 </table><br>
             </div>
-            <div class="center">
+            <!-- <div class="center">
                 <button type="button" class="btn btn-primary col-md-2" onclick="comparacion()">Comparar</button>
-            </div>
+            </div> -->
         </form>
     </div>
 
