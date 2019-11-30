@@ -4,6 +4,13 @@
 - 
 
 */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+    background-color: rgb(214, 229, 230);
+} */
 
 label {
     /* margin-right: 80px; */
@@ -30,6 +37,7 @@ label {
 }
 
 input {
+    color: black;
     border: 1px solid;
     border-radius: 6px;
     /* modificar */
@@ -38,11 +46,14 @@ input {
     max-width: 80px;
     /* max-width: 100px; */
     /* height: 25px; */
+    height: 28px;
     outline: none;
     text-align: right;
     /* modificar */
     /* padding-right: 1%; */
     background-color: transparent;
+    /* 1.4em = 14px (1.4 X 10) */
+    font-size: 1.2em;
 }
 
 .caja {
@@ -63,6 +74,24 @@ input {
     border-radius: 0;
     text-align: center;
     border-bottom: double;
+}
+
+.grownd {
+    color: black;
+    border: none;
+    text-align: center;
+    border-radius: 0%;
+    border-bottom: red solid 3px;
+    border-top: red solid 3px;
+}
+
+.correct {
+    color: black;
+    border: none;
+    text-align: center;
+    border-radius: 0%;
+    border-bottom: green solid 3px;
+    border-top: green solid 3px;
 }
 
 .balanced {
@@ -112,7 +141,7 @@ form {
 #estados,
 #tablarazones {
     margin-top: 5%;
-    display: flex;
+    /* display: flex; */
 }
 
 .boton {
@@ -183,6 +212,16 @@ nav ul li a {
 
 nav ul li:hover {
     background: #3ead47;
+}
+
+/* Display contem */
+
+.Show {
+    display: flex;
+}
+
+.Hide {
+    display: none;
 }
 
 /* dropdown */
