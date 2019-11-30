@@ -100,7 +100,7 @@ function calcularRazones() {
     // console.log(razones);
     // llenar tabla con valores
     for (let ted = 0; ted < razones.length; ted++) {
-        if (razones[ted] === Number) {
+        if (!isNaN(razones[ted])) {
             document.getElementById('r' + (ted + 1)).innerHTML = (razones[ted].toFixed(2)).toString();
         }
         // element = razones[ted];
@@ -121,7 +121,7 @@ function comparacion() {
     console.log(razones, comparar);
     // llenar tabla con la comparativa
     for (let ted = 0; ted < razones.length; ted++) {
-        if (razones[ted] === Number && comparar[ted] === Number) {
+        if (!isNaN(razones[ted]) && !isNaN(comparar[ted])) {
             if (razones[ted] > comparar[ted]) {
                 document.getElementById('estado' + (ted + 1)).innerText = "ALTO";
                 document.getElementById('estado' + (ted + 1)).style.backgroundColor = "green";

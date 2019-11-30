@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -17,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class=" navbar-brand"href="#">Home</a>
+        <a class=" navbar-brand" href="#">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,38 +61,38 @@
             <div class="container center">
 
                 <label class="espacio" for="ventasnetas">+ Ventas Netas: </label>
-                <input placeholder="0" value="" type="number" id="ventasnetas" /><br>
+                <input placeholder="0" value="100" type="number" id="ventasnetas" /><br>
 
                 <label class="espacio" for="costoventas">- Costo De Ventas: </label>
-                <input placeholder="0" value="" type="number" id="costoventas" /><br>
+                <input placeholder="0" value="100" type="number" id="costoventas" /><br>
 
                 <label class="espacio negrita" for="utilidadbruta">= UTILIDAD BRUTA: </label>
-                <input placeholder="0" value="" type="number" id="utilidadbruta" class="caja" disabled><br><br>
+                <input placeholder="0" value="100" type="number" id="utilidadbruta" class="caja" disabled><br><br>
 
                 <label class="espacio" for="gastosadmin">- Gastos Administrativos: </label>
-                <input placeholder="0" value="" type="number" id="gastosadmin" /><br>
+                <input placeholder="0" value="100" type="number" id="gastosadmin" /><br>
 
                 <label class="espacio" for="gastosventas">- Gastos De Ventas: </label>
-                <input placeholder="0" value="" type="number" id="gastosventas" /><br>
+                <input placeholder="0" value="100" type="number" id="gastosventas" /><br>
 
                 <label class="espacio" for="depreciacion">- Depreciacíon: </label>
-                <input placeholder="0" value="" type="number" id="depreciacion" /><br>
+                <input placeholder="0" value="100" type="number" id="depreciacion" /><br>
 
                 <label class="espacio negrita" for="utilidadoperativa">= UTILIDAD OPERATIVA (EBIT): </label>
-                <input placeholder="0" value="" type="number" id="utilidadoperativa" class="caja" disabled><br><br>
+                <input placeholder="0" value="100" type="number" id="utilidadoperativa" class="caja" disabled><br><br>
 
                 <label class="espacio" for="gastosfinancieros">- Gastos Financieros: </label>
-                <input placeholder="0" value="" type="number" id="gastosfinancieros" /><br>
+                <input placeholder="0" value="100" type="number" id="gastosfinancieros" /><br>
 
                 <label class="espacio negrita" for="utilidadantesimpuestos">= UTILIDAD ANTES DE IMPUESTOS (EBT):
                 </label>
-                <input placeholder="0" value="" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
+                <input placeholder="0" value="100" type="number" id="utilidadantesimpuestos" class="caja" disabled><br></br>
 
                 <label class="espacio" for="impuestos">- Impuestos: </label>
-                <input placeholder="0" value="" type="number" id="impuestos" /><br>
+                <input placeholder="0" value="100" type="number" id="impuestos" /><br>
 
                 <label class="espacio negrita" for="utilidadneta">= INGRESOS NETOS: </label>
-                <input placeholder="0" value="" type="number" id="utilidadneta" class="caja" disabled><br><br>
+                <input placeholder="0" value="100" type="number" id="utilidadneta" class="caja" disabled><br><br>
             </div>
         </form>
         <!-- end estado de resultado -->
@@ -105,35 +107,35 @@
                 <div class="container center col-md-6">
                     <h4>Activos</h4><br>
                     <label class="divicion" for="efectivo">Efectivo/Bancos:</label>
-                    <input placeholder="0" value="" type="number" id="efectivo" /><br>
+                    <input placeholder="0" value="100" type="number" id="efectivo" /><br>
                     <label class="divicion" for="cuentasporcobrar">Cuentas Por Cobrar:</label>
-                    <input placeholder="0" value="" type="number" id="cuentasporcobrar" /><br>
+                    <input placeholder="0" value="100" type="number" id="cuentasporcobrar" /><br>
                     <label class="divicion" for="inventario">Inventario:</label>
-                    <input placeholder="0" value="" type="number" id="inventario" /><br>
+                    <input placeholder="0" value="100" type="number" id="inventario" /><br>
                     <label class="divicion negrita" for="activoscirculantes">Activos Circulantes Totales:</label>
-                    <input placeholder="0" value="" type="number" id="activoscirculantes" class="caja" disabled /><br><br>
+                    <input placeholder="0" value="100" type="number" id="activoscirculantes" class="caja" disabled /><br><br>
                     <label class="divicion negrita" for="activosfijos">Activos Fijos:</label>
-                    <input placeholder="0" value="" type="number" id="activosfijos" /><br><br>
+                    <input placeholder="0" value="100" type="number" id="activosfijos" /><br><br>
                     <label class="divicion negrita" for="">Activos Totales: </label>
-                    <input placeholder="0" value="" type="number" id="totalactivos" class="caja" disabled>
+                    <input placeholder="0" value="100" type="number" id="totalactivos" class="caja" disabled>
 
-                    <!-- <label class="balanced negrita"for="activos">Activos = <input placeholder="0"value=""class="especial"type="number"id="activos"disabled></label> -->
+                    <!-- <label class="balanced negrita"for="activos">Activos = <input placeholder="0"value="100"class="especial"type="number"id="activos"disabled></label> -->
                 </div>
 
                 <div class="container center col-md-6">
                     <h4>Pasivos </h4><br>
                     <label class="divicion negrita" for="pasivoscirculantes">Pasivos Circulantes:</label>
-                    <input placeholder="0" value="" type="number" id="pasivoscirculantes" class="caja" /><br><br>
+                    <input placeholder="0" value="100" type="number" id="pasivoscirculantes" class="caja" /><br><br>
                     <label class="divicion" for="pasivoslargoplazo">Pasivos a Largo Plazo:</label>
-                    <input placeholder="0" value="" type="number" id="pasivoslargoplazo" /><br>
+                    <input placeholder="0" value="77" type="number" id="pasivoslargoplazo" /><br>
                     <label class="divicion negrita">Pasivos Totales</label>
-                    <input placeholder="0" value="" class="caja" type="number" id="totalpasivos" disabled><br><br><br>
+                    <input placeholder="0" value="100" class="caja" type="number" id="totalpasivos" disabled><br><br><br>
 
                     <h4>Patrimonio</h4><br>
                     <label class="divicion" for="capitalcomun">Capital Comun:</label>
-                    <input placeholder="0" value="" type="number" id="capitalcomun" />
+                    <input placeholder="0" value="100" type="number" id="capitalcomun" />
 
-                    <!-- <label class="balanced negrita"for="pmasc">Pasivos + Capital = <input placeholder="0"value=""class="especial"type="number"id="pmasc"disabled/></label> -->
+                    <!-- <label class="balanced negrita"for="pmasc">Pasivos + Capital = <input placeholder="0"value="100"class="especial"type="number"id="pmasc"disabled/></label> -->
                 </div>
             </div>
 
@@ -142,11 +144,11 @@
             <div class="container center row col-md-12" style="padding-top: 20%;">
                 <div class="container center col-md-6">
                     <label class="balanced negrita" for="activos">Activos = </label>
-                    <input placeholder="0" value="" class="especial" type="number" id="activos" disabled>
+                    <input placeholder="0" value="100" class="especial" type="number" id="activos" disabled>
                 </div>
                 <div class="container col-md-6">
                     <label class="balanced center negrita" for="pmasc">Pasivos + Capital = </label>
-                    <input placeholder="0" value="" class="especial" type="number" id="pmasc" disabled />
+                    <input placeholder="0" value="100" class="especial" type="number" id="pmasc" disabled />
                 </div>
             </div>
 
