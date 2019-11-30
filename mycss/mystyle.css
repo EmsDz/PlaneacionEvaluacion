@@ -4,13 +4,14 @@
 - 
 
 */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body {
-    background-color: rgb(214, 229, 230);
-} */
+body {
+    background-image: url('descarga.jpg');
+}
 
 label {
     /* margin-right: 80px; */
@@ -175,7 +176,9 @@ form {
     background-color: #16def9;
 }*/
 
+
 /* navbar */
+
 .navbar {
     top: 0;
     /* position: fixed; */
@@ -214,6 +217,7 @@ nav ul li:hover {
     background: #3ead47;
 }
 
+
 /* Display contem */
 
 .Show {
@@ -224,7 +228,10 @@ nav ul li:hover {
     display: none;
 }
 
+
 /* dropdown */
+
+
 /* .dropbtn {    background-color: #4CAF50;    color: white;    padding: 16px;    font-size: 16px;    border: none;}
   .dropdown {    position: relative;    display: inline-block;  }
   .dropdown-content {    display: none;    position: absolute;    background-color: #f1f1f1;    min-width: 160px;    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);    z-index: 1;  }
